@@ -68,3 +68,64 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+### instalaciones
+
+npm install react-router-dom@latest
+
+npm i react-router
+
+npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+
+npm install --save firebase
+
+npm i --save @fortawesome/fontawesome-svg-core
+
+npm install --save @fortawesome/free-solid-svg-icons
+
+npm install --save @fortawesome/react-fontawesome
+
+npm install axios
+
+npm install --save sweetalert2 sweetalert2-react-content
+
+npm add react-router-dom
+
+npm install react-router-dom@6
+
+npm install --save styled-components
+
+npm i bootstrap
+
+npm i reactstrap react react-domp
+
+npm install react-bootstrap bootstrap
+
+npm install @mui/material @emotion/react @emotion/styled
+
+npm install @mui/icons-material
+
+npm install react-player
+
+npm install react-loader-spinner --save
+
+npm install --save react-timer-hook
+
+npm install -S react-native-number-please
+
+npm install react-hook-form
+
+npm add react-select
+
+npm install redux
+
+npm install react-redux
+
+npm install --save redux-thunk
+
+npm install formik
+
+npm install yup

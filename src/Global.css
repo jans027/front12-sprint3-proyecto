@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Raleway:wght@200;400;600&display=swap');
+
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+}
+html{
+  background-color: var(--main-bg-color);
+}
+
+:root {
+  --main-bg-color: #1F233E;
+  --gray: #9C9C9C;
+  --second-color: #2BE7E8;
+  --shade-main: #2E3562;
+  --White: #ffffff;
+  --font-1: 'Racing Sans One', cursive;
+  --font-2: 'Raleway', sans-serif;
+}
+
+section {
+  color: #fff;
+  background: #1F233E;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* .col-2,
+.col-3,
+.col-6,
+.col-12,
+.container,
+.row {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}  */
+
+.app {
+  background-color: #252d4a;
+  max-width: 650px;
+  min-width: 450px;
+  height: min-content;
+  min-height: 200px;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* PREGUNTAS */
+.lado-izquierdo {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.pregunta-numero {
+  margin-bottom: 20px;
+}
+
+.pregunta-numero span {
+  font-size: 28px;
+}
+
+.pregunta-titulo {
+  margin-bottom: 12px;
+}
+
+.lado-derecho {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* FINALIZADO */
+.juego-terminado {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 24px;
+  align-items: center;
+}
+
+/* GRAL */
+/* button {
+    width: 100%;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #252d4a;
+    border-radius: 15px;
+    display: flex;
+    padding: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    border: 5px solid #234668;
+    cursor: pointer;
+  } */
+
+.tiempo-restante {
+  font-size: 14px;
+  color: #fcbf3d;
+  margin-bottom: 20px;
+}
+
+.correct,
+.correct:hover {
+  background-color: #2f922f;
+}
+
+.incorrect,
+.incorrect:hover {
+  background-color: #ff3333;
+}
+
+.btns-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button:hover {
+  background-color: #234668;
+}
+
+button[disabled] {
+  background-color: #555e7d;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+button:focus {
+  outline: none;
+}
+
+button svg {
+  margin-right: 5px;
+}
+
+.navbar-custom {
+  width: 100%;
+
+  height: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+.navbar-custom .navbar-nav-custom {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+}
+
+.navbar-custom .navbar-nav-custom>li {
+
+  height: 50px;
+
+}
+
+
+
+.slider__contenedor {
+  height: 270px;
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 0px 10px white, 0px 9px 40px;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.slider {
+  height: 280px;
+  width: 260px;
+  border: 1px solid black;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.slider__btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  /* background: rgba(18, 46, 205, 0.83); */
+  border: none;
+  background-color: transparent;
+  margin-left: 0px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  margin-top: -140px;
+  /* border-radius: 50%; */
+  cursor: pointer;
+  transform: translateY(262px);
+}
+
+.slider__btn--right {
+  right: 0px;
+}
+
+.slider__btn--left {
+  left: 0px;
+}
+
+.slider__section {
+  width: 100%;
+  text-align: center;
+
+
+
+}
+
+.producto {
+  width: 250px;
+  height: 270px;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid black;
+
+}
+
+/* .producto .travel{
+  display: block;
+  cursor: pointer;
+} */
+
+
+/* .producto .imgP {
+  position: relative;
+  width: 200px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 60px;
+}
+.producto img {
+  width: 200px;
+  height: 150px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+} */
+.producto .contenido {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3px;
+  text-align: center;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.producto .contenido .contenido2 {
+  display: flex;
+  margin-top: 5px;
+  flex-direction: row;
+  text-align: center;
+  gap: 43px;
+  margin-left: 12px;
+  margin-right: 7px;
+}
+
+.producto .contenido .contenido2 .precio-card {
+  margin-left: 55px;
+  font-size: 12px;
+}
+
+.producto .contenido2 .valoracion-card {
+  font-size: 12px;
+  margin-left: -37px;
+}
+
+.producto .contenido1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.producto .contenido1 .card-title {
+  font-size: 18px;
+  margin-left: 14px;
+}
+
+.Star {
+  margin-top: -2px;
+  margin-left: 5px;
+  color: #ff7029;
+  height: 5px;
+  font-size: 15px;
+}
