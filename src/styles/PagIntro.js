@@ -102,6 +102,7 @@ export const Singupfrm= styled.div`
     justify-content: center;
     align-items: center;
     margin-top:0px;
+    margin-bottom: 1em;
 `
 export const Form= styled.form`
     margin-top:0px;

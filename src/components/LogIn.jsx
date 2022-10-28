@@ -110,10 +110,7 @@ export function Login() {
 
       <TextIntro>
         <div>
-          <h2>Welcome back</h2>
-        </div>
-        <div>
-          <h5>Sing in to an existing account using your Email</h5>
+          <h2>Sign In</h2>
         </div>
       </TextIntro>
 
