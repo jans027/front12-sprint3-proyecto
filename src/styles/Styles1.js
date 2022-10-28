@@ -168,7 +168,7 @@ export const DivCard = styled.div`
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                object-position: center center;
+                object-position: center;
         }
 `;
 export const DivCard2 = styled.div`
@@ -230,9 +230,13 @@ export const LinearBarStyled = styled.div`
 `
 
 export const DivPortada = styled.div`
-                
+                /* margin-top: 12em; */
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
+                img{
+                        width: 250px;
+                }
 `
 
 export const DivLogos = styled.div`
@@ -262,11 +266,10 @@ export const Navigation = styled.nav`
 
 `
 export const Seccion1 = styled.section`
-                /* border: 1px solid white; */
                 display: flex;
                 flex-direction: column;
-                /* width: 100%; */
-                max-height: 100vh;
+                height:100%;
+                padding: 1.5em 0;
                 background-color: var(--main-bg-color);
 `
 

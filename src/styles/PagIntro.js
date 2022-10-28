@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 
- export const Body = styled.body `
+export const Body = styled.body `
   
     color: #fff;
     background-color:  #1F233E;
@@ -76,36 +76,32 @@ background-position: center;
 `
 
 export const TextIntro= styled.div`
-display:flex;
-flex-direction: column;
-align-items: center;
-margin-top:-100px;
-
-h2{ 
-text-align: center;
-justify-content: center;
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-
-}
-h5{   
-
-justify-content: center;
-top: 80%;
-bottom: 25.71%;
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-
-}
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top:-100px; */
+    h2{ 
+        text-align: center;
+        justify-content: center;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+    }
+    h5{   
+        justify-content: center;
+        top: 80%;
+        bottom: 25.71%;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+    }
 `
 
 export const Singupfrm= styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top:0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:0px;
 `
 export const Form= styled.form`
 margin-top:0px;
@@ -113,7 +109,7 @@ text-align: center;
 justify-content: center;
 `
 export const InputContainer= styled.div`
-  position:relative;
+    position:relative;
     height: 45px;
     width: 90%;
     margin-bottom: 17px;

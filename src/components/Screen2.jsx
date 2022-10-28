@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { DivCard, Enlace1, Section,Textos1 } from '../styles/Styles1'
 import NavBar from './NavBar'
-
+import portada2 from '../images/screen2.png'
 
 
 
@@ -13,7 +13,7 @@ export default class Screen2 extends Component {
             <Section>
                 <NavBar/>
                 <DivCard>
-                    <img src="https://i.ibb.co/sQn637k/Img-Bg-1.png" alt="Svg-1" border="0"/>
+                    <img src={portada2}alt="Svg-1" border="0"/>
                 </DivCard>
                 <Textos1>
                     <h1>Discipline</h1>
