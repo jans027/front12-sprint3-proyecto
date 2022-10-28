@@ -34,17 +34,6 @@ section {
   width: 100%;
 }
 
-/* .col-2,
-.col-3,
-.col-6,
-.col-12,
-.container,
-.row {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-}  */
 
 .app {
   background-color: #252d4a;
@@ -96,20 +85,6 @@ section {
   align-items: center;
 }
 
-/* GRAL */
-/* button {
-    width: 100%;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #252d4a;
-    border-radius: 15px;
-    display: flex;
-    padding: 5px;
-    justify-content: flex-start;
-    align-items: center;
-    border: 5px solid #234668;
-    cursor: pointer;
-  } */
 
 .tiempo-restante {
   font-size: 14px;
@@ -250,25 +225,6 @@ button svg {
 
 }
 
-/* .producto .travel{
-  display: block;
-  cursor: pointer;
-} */
-
-
-/* .producto .imgP {
-  position: relative;
-  width: 200px;
-  height: 120px;
-  overflow: hidden;
-  border-radius: 60px;
-}
-.producto img {
-  width: 200px;
-  height: 150px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-} */
 .producto .contenido {
   display: flex;
   flex-direction: column;

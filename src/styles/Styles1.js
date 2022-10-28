@@ -242,8 +242,21 @@ export const DivPortada = styled.div`
 export const DivLogos = styled.div`
                 display: flex;
                 justify-content: center;
+                margin-top: .7em;
+                div:nth-child(1){
+                                        border-right:.1em solid white;
+                                }
                 div{
-                        width: 10em;
+                        width: 5em;
+                        display: flex;
+                        justify-content: center;
+                        button{
+                                
+                                &:hover{
+                                        background-color: transparent;
+                                        transform: scale(1.1);
+                                }
+                        }
                 }
 `
 

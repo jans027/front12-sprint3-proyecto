@@ -3,8 +3,8 @@ import "../Global.css"
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { TextIntro, Singupfrm, Form, Input1, InputContainer, ButtonIntro1, } from '../styles/PagIntro'
-import logogoogle from '../images/logogoogle.png'
-import logofb from '../images/logofb.png'
+import logogoogle from '../images/google.png'
+import logofb from '../images/facebook.png'
 import logo from '../images/Logo.png'
 // import Image from '../styles/PagIntro'
 import { DivLogos, DivPortada, Seccion1 } from "../styles/Styles1";
@@ -103,91 +103,83 @@ export function Login() {
 
     <Seccion1>
       <NavBar />
-        <DivPortada>
-          <img src={logo} alt="logo" />
-        </DivPortada>
+      <DivPortada>
+        <img src={logo} alt="logo" />
+      </DivPortada>
 
 
-        <TextIntro>
+      <TextIntro>
+        <div>
+          <h2>Welcome back</h2>
+        </div>
+        <div>
+          <h5>Sing in to an existing account using your Email</h5>
+        </div>
+      </TextIntro>
+
+
+      <Singupfrm>
+        <Form onSubmit={handleSubmit}>
+
+          <InputContainer >
+            <Input1 type="email" name="email" onChange={handleChange} placeholder="email" />
+          </InputContainer>
+
+          <InputContainer>
+            <Input1 type="password" name="password" onChange={handleChange}
+              placeholder="password" />
+          </InputContainer>
+
           <div>
-            <h2>Welcome back</h2>
+            <ButtonIntro1 type="submit" >
+              Sign In
+            </ButtonIntro1>
           </div>
-          <div>
-            <h5>Sing in to an existing account using your Email</h5>
-          </div>
-        </TextIntro>
+
+        </Form>
+      </Singupfrm>
 
 
-        <div className="col-12">
-          <div className="row">
-            <Singupfrm>
-              <Form onSubmit={handleSubmit}>
-                <InputContainer className="mb-3 mt-3">
-                  {/* <Label htmlFor="email">Email</Label> */}
-                  <Input1 type="email" name="email" onChange={handleChange} placeholder="email" />
-                </InputContainer>
-                <InputContainer className="mb-2">
-                  {/* <Label htmlFor="password">Password</Label> */}
-                  <Input1 type="password" name="password" onChange={handleChange}
-                    placeholder="password" />
-                </InputContainer>
-                <div className="col-12">
-                  <div className="row">
-                    <div className="container" Style="text-align: center;">
-                      <ButtonIntro1 type="submit" >
-                        Sign In
-                      </ButtonIntro1>
-                    </div>
-                  </div>
-                </div>
 
-              </Form>
-            </Singupfrm>
-          </div>
+      <div className="col-12  mt-2">
+        <div className="container" Style="text-align:center">
+          <a href="#!" Style="font-weight:400; font-size:12px;" onClick={handleResetPassword}>
+            Forgot Password?
+          </a>
+        </div>
+      </div>
+
+      <div className="col-12">
+        <div className="container" Style="text-align:center; margin-top:50px; font-size:20px">
+          <h1>Sing In With</h1>
+        </div>
+      </div>
+
+      <DivLogos>
+
+        <div>
+          <button onClick={handleFacebookSignin}>
+            <img Style="height:50px;" src={logofb} alt="facebook" />
+          </button>
         </div>
 
-
-
-        <div className="col-12  mt-2">
-          <div className="container" Style="text-align:center">
-            <a href="#!" Style="font-weight:400; font-size:12px;" onClick={handleResetPassword}>
-              Forgot Password?
-            </a>
-          </div>
+        <div>
+          <button onClick={handleGoogleSignin}>
+            <img Style="height:60px; width:60px;" src={logogoogle} alt="google" />
+          </button>
         </div>
 
-        <div className="col-12">
-          <div className="container" Style="text-align:center; margin-top:50px; font-size:20px">
-            <h1>Sing In With</h1>
-          </div>
-        </div>
-
-        <div className="col-12">
-          <div className="row" Style="text-align:center;">
-            <DivLogos className="container d-flex">
-              <div className="col-6">
-                <button onClick={handleFacebookSignin}>
-                  <img Style="height:60px;" src={logofb} alt="" />
-                </button>
-              </div>
-              <div className="col-6">
-                <button onClick={handleGoogleSignin}>
-                  <img Style="height:60px; width:60px;" src={logogoogle} alt="" />
-                </button>
-              </div>
-            </DivLogos>
-          </div>
-        </div>
+      </DivLogos>
 
 
-        <div className="col-12">
-          <div className="container" Style="margin-top:40px; font-weight:400; font-size:14px; text-align:center;">
-            Dont have account?
-            <Link to="/singup" Style="color:#2BE7E8; margin-left:10px;">
-              Sing up
-            </Link>
-          </div>
+      <div className="col-12">
+        <div className="container" Style="margin-top:40px; font-weight:400; font-size:14px; text-align:center;">
+          Dont have account?
+          <Link to="/singup" Style="color:#2BE7E8; margin-left:10px;">
+            Sing up
+          </Link>
         </div>
+      </div>
 
     </Seccion1>
   );
