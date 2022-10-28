@@ -7,13 +7,16 @@ import { DivPortada } from "../styles/Styles1";
 import NavBar from "./NavBar";
 import { useDispatch } from "react-redux";
 import { registerWithEmail } from "../Redux/Actions/userAction";
+// sweet alert..................................................
+import Swal from 'sweetalert2'
+import { Axios } from "axios";
 
 
 
 
 export function SingUp() {
   // const { signup } = UseAuth();
-  
+
 
   const [user, setUser] = useState({
     email: "",
@@ -25,16 +28,58 @@ export function SingUp() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  // const MySwal = withReactContent(Swal)
 
 
 
+  // Sweat alert........................................................
   const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(registerWithEmail(user.email, user.password, user.displayName, user.phoneNumber))
     setError("");
-    navigate("/Login");
+
+    if (user.email === "" || user.displayName === "" || user.phoneNumber === "" || user.password === "") {
+      // console.log('eooooooooooooo', user)
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Todos los Campos son Obligatorios!',
+      })
+    } else {
+      Swal.fire({
+        title: 'Good job!',
+        text: 'Usuario Guardado Correctamente!',
+        icon: 'success',
+
+      }).then((result) => {
+        if (result.isConfirmed) {
+          dispatch(registerWithEmail(user.email, user.password, user.displayName, user.phoneNumber))
+          // alert('ok')
+          navigate("/Login");// cambiar ruta...................................
+        }
+      })
+    }
+    e.target.reset();//metodo que resetea campos ................................
   };
   // console.log(user);
+
+
+  // Upload Image Cloudinary....................................
+
+  const [imageSelected, setImageSelected] = useState("")
+
+  const uploadImage = () =>{
+    const formData = new FormData()
+    formData.append("file", imageSelected)
+    formData.append("upload_preset", "prueba1")
+
+    Axios.post("https://api.cloudinary.com/v1_1/daqsl5kfv/upload", 
+    formData
+    ).then((response) => {
+      console.log(response)
+    })
+  };
+
+
 
 
 
@@ -89,6 +134,14 @@ export function SingUp() {
                         <Label htmlFor="password">Password</Label>
                         <Input1 type="password" name="password" onChange={(e) => setUser({ ...user, password: e.target.value })}
                           placeholder="*************" />
+                      </InputContainer>
+
+                      <InputContainer
+                        onChange={(event) => setImageSelected(event.target.files[0]) }
+                        className="mb-2">
+                        <Label htmlFor="file">Password</Label>
+                        <Input1 type="file" name="file" />
+                        <button onClick={uploadImage} >Upload</button>
                       </InputContainer>
 
                       <div className="col-12">

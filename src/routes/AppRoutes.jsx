@@ -37,7 +37,7 @@ const AppRoutes = () => {
         const auth = getAuth();
         onAuthStateChanged( auth, (user) => {
             if (user?.uid) {
-                console.log(user);
+                // console.log(user);
                 // Posibilidad de recuperar la info luego de que se recargue la web
                 setAuth(true)
             } else {

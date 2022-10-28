@@ -11,9 +11,11 @@ import portada from '../images/portada.png'
 import { DivLogos, DivPortada, Seccion1 } from "../styles/Styles1";
 // import NavBar from "./NavBar";
 import { useDispatch } from "react-redux";
-import { loginGoogle,  LoginWithEmail } from "../Redux/Actions/userAction";
+import { loginGoogle,  LoginWithEmail, registerWithEmail } from "../Redux/Actions/userAction";
 import { UseAuth } from "../context/AuthContext";
 import NavBar from "./NavBar";
+// sweet alert..................................................
+import Swal from 'sweetalert2'
 
 
 
@@ -34,11 +36,37 @@ export function Login() {
 
   const dispatch = useDispatch()
 
+
+
+  // Sweat alert........................................................
   const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(LoginWithEmail(user.email, user.password));
-    navigate("/Height");
+    e.preventDefault();  
+    if (user.email === "" || user.password === "") {
+
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Todos los Campos son Obligatorios!',
+      })
+    } else {
+      Swal.fire({
+        title:'Good job!',
+        text:'Gracias por Regresar!',
+        icon:'success',
+        
+      }).then((result) => {
+        if (result.isConfirmed) {
+          dispatch(LoginWithEmail(user.email, user.password));
+          // alert('ok')
+          navigate("/Height");// cambiar ruta...................................
+        } 
+      })
+    }
+    e.target.reset();//metodo que resetea campos ................................
 }
+
+
+
 
 
   const handleChange = ({ target: { value, name } }) =>
